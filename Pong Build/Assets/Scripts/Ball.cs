@@ -39,7 +39,22 @@ public class Ball : MonoBehaviour
         float velY = gameObject.GetComponent<Rigidbody2D>().velocity.y;
 
         //if we hit a wall flip the Y 
-
+        /*
+         * Before we add this collision we need to add tags to the Walls 
+         */ 
+       
         //if we hit a paddle flip the X
+        /*
+         *Before we add this collision we need to add tags to the Paddles 
+         */
     }
+
+    //Method to check to see if the Ball has triggered the goal. 
+
+    /*
+     * Get the Goal object from the collision
+     * Get the ID from the Goal object (we need to make an enum)
+     * Send it to the Game Manager to update scores
+     * 
+     */
 }

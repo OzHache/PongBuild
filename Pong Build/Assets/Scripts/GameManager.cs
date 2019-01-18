@@ -7,10 +7,14 @@ public class GameManager : MonoBehaviour
     //public fields that store GameObjects from the Scene
     public Text P1Text;                 //From Text UI
     public Text P2Text;                 
-    public Ball ball;             //Generic GameObjects to hold the others
-    public GameObject P1Paddle;
+    public Ball ball;                   //Ball Script 
+    public GameObject P1Paddle;         //Generic GameObjects to hold the others
     public GameObject P2Paddle;
     public float Speed;                 //control the Speed of the Paddles
+
+    //todo: Add public static GameManager and assign it's self in the start methods
+
+
     private bool running = false;
 
     //by default all fields and methods are private
@@ -26,12 +30,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //TODO: Check if there is a winner
         PaddleMovement();
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             StartGame();
         }
+        
     }
 
     private void PaddleMovement()
@@ -82,6 +89,11 @@ public class GameManager : MonoBehaviour
         else
         {
             ball.Launch();
+            //TODO: Change running to true
         }
     }
+
+    //TODO: Add a method to update the Scores and the UI
+    //change running to false
+    //reset the ball to origin
 }
