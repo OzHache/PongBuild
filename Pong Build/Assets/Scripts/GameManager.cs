@@ -11,11 +11,10 @@ public class GameManager : MonoBehaviour
     public GameObject P1Paddle;         //Generic GameObjects to hold the others
     public GameObject P2Paddle;
     public float Speed;                 //control the Speed of the Paddles
-
-    //todo: Add public static GameManager and assign it's self in the start methods
-
-
+    public static GameManager GetGameManager;
     private bool running = false;
+    private int P1Score = 0;
+    private int P2Score = 0;
 
     //by default all fields and methods are private
     [SerializeField] int Win = 5;       // This is a field that we want to edit in the Editor but nothing else should have access to change it
@@ -24,7 +23,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        UpdateUI();
+        GetGameManager = this;
     }
 
     // Update is called once per frame
@@ -89,11 +89,33 @@ public class GameManager : MonoBehaviour
         else
         {
             ball.Launch();
-            //TODO: Change running to true
+            running = true;
+           
         }
     }
+    public void Score(PlayerGoal score)
+    {
+        switch (score)
+        {
+            case PlayerGoal.Player1:
+                P1Score++;
+                break;
+            case PlayerGoal.Player2:
+                P2Score++;
+                break;
+            default:
+                Debug.Log(score.ToString() + " is not a valid input");
+                break;
+        }
+        UpdateUI();
+        running = false;
+    }
 
-    //TODO: Add a method to update the Scores and the UI
-    //change running to false
+    void UpdateUI()
+    {
+        P1Text.text = P1Score.ToString();
+        P2Text.text = P2Score.ToString();
+    }
+    //todo:
     //reset the ball to origin
 }

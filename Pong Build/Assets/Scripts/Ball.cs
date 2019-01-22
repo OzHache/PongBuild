@@ -39,7 +39,6 @@ public class Ball : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Capture the Velocity of the Ball
 
 
         //if we hit a wall flip the Y 
@@ -54,13 +53,4 @@ public class Ball : MonoBehaviour
             rb.velocity = new Vector2(-velX, velY);
         }
     }
-
-    //Method to check to see if the Ball has triggered the goal. 
-
-    /*
-     * Get the Goal object from the collision
-     * Get the ID from the Goal object (we need to make an enum)
-     * Send it to the Game Manager to update scores
-     * 
-     */
 }

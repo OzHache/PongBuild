@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{D6132456-E79F-351E-54B2-C78B798C0120}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Ball.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Goal.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameManager.cs" Line="84" Column="17" />
-      <File FileName="Assets/Scripts/Ball.cs" Line="43" Column="1" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="19" Column="5" />
+      <File FileName="Assets/Scripts/Ball.cs" Line="64" Column="8" />
+      <File FileName="Assets/Scripts/Goal.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,7 +11,7 @@
           <Node name="Pong Build" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Ball.cs" selected="True" />
+                <Node name="Goal.cs" selected="True" />
               </Node>
             </Node>
           </Node>
